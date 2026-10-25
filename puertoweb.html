@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PuertoWeb | Páginas web ultrarrápidas para locales del puerto de Veracruz</title>
+  <meta name="description" content="Diseño web sin base de datos, seguro y sin costos ocultos de mantenimiento para negocios del puerto de Veracruz." />
+  <meta name="theme-color" content="#0B1120" />
+
+  <!-- Tailwind CSS por CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tipografía: Sora (gruesa y tecnológica, ideal para el logo tipográfico) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&display=swap" rel="stylesheet" />
+
+  <!-- Configuración de Tailwind: fuente y color de fondo personalizado -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Sora', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
+          colors: { navy: '#0B1120' }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Respeta a quienes prefieren menos movimiento */
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .wave-move { animation: none !important; }
+    }
+    /* Único movimiento decorativo: las olas del hero se desplazan muy despacio */
+    @keyframes drift { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    .wave-move { animation: drift 24s linear infinite; }
+    /* Compensa la altura de la barra fija al navegar por anclas */
+    section[id] { scroll-margin-top: 5rem; }
+  </style>
+</head>
+
+<body class="bg-navy text-gray-300 font-sans antialiased">
+
+  <!-- ============ 1. NAVBAR ============ -->
+  <header class="sticky top-0 z-40 border-b border-slate-800 bg-navy/90 backdrop-blur">
+    <nav class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4" aria-label="Principal">
+      <!-- Logo tipográfico -->
+      <a href="#inicio" class="text-2xl font-extrabold tracking-tight text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 rounded">
+        Puerto<span class="text-cyan-400">Web</span>
+      </a>
+
+      <!-- Enlaces a la derecha -->
+      <div class="flex items-center gap-5 sm:gap-8">
+        <a href="#beneficios" class="text-sm font-semibold text-gray-300 transition hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 rounded">
+          Beneficios
+        </a>
+        <a href="#contacto" class="rounded-lg bg-cyan-500 px-4 py-2 text-sm font-bold text-slate-900 transition hover:bg-cyan-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-white">
+          Contacto
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ============ 2. HERO CON SAN JUAN DE ULÚA ============ -->
+    <section id="inicio" class="relative overflow-hidden">
+      
+      <!-- Fondo: Imagen de San Juan de Ulúa con superposición oscura y degradado a sólido -->
+      <div class="absolute inset-0 z-0">
+        <!-- Imagen de fondo -->
+        <img src="https://reservascms.syctravel.com/Content/images/001/Productos/Prod_3823_1_20220511_113335.jpg" 
+             alt="Fuerte de San Juan de Ulúa" 
+             class="h-full w-full object-cover object-center" />
+        
+        <!-- Capa de oscurecimiento base (bg-navy/80) -->
+        <div class="absolute inset-0 bg-navy/80"></div>
+        
+        <!-- Degradado que desvanece la imagen hacia el color sólido 'navy' en la parte inferior -->
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-navy/50 to-navy"></div>
+      </div>
+
+      <!-- Contenido del Hero (elevado sobre el fondo con z-10) -->
+      <div class="relative z-10 mx-auto max-w-4xl px-5 pb-40 pt-20 sm:pt-28 sm:pb-48">
+        <h1 class="text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl drop-shadow-md">
+          Páginas web ultrarrápidas para locales del puerto de Veracruz.
+        </h1>
+        <p class="mt-6 max-w-2xl text-lg leading-relaxed text-gray-200 drop-shadow">
+          Diseño web sin base de datos, seguro y sin costos ocultos de mantenimiento para hacer destacar tu negocio.
+        </p>
+        <div class="mt-10">
+          <a href="#contacto"
+             class="inline-block rounded-xl bg-cyan-500 px-8 py-4 text-base font-bold text-slate-900 shadow-lg shadow-cyan-500/30 transition hover:bg-cyan-400 hover:shadow-cyan-400/40 focus:outline-none focus-visible:ring-2 focus-visible:ring-white">
+            Cotiza tu página web
+          </a>
+        </div>
+      </div>
+
+      <!-- Olas del puerto: detalle decorativo en la base del hero (elevado sobre el fondo) -->
+      <div class="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-28 overflow-hidden" aria-hidden="true">
+        <svg class="wave-move absolute bottom-0 left-0 h-28 w-[200%] text-cyan-500/20" viewBox="0 0 2400 120" preserveAspectRatio="none" fill="currentColor">
+          <path d="M0 60 C 150 20, 300 100, 450 60 S 750 20, 900 60 S 1050 100, 1200 60 C 1350 20, 1500 100, 1650 60 S 1950 20, 2100 60 S 2250 100, 2400 60 V120 H0 Z"/>
+        </svg>
+        <svg class="wave-move absolute bottom-0 left-0 h-16 w-[200%] text-cyan-400/20" style="animation-duration: 36s" viewBox="0 0 2400 120" preserveAspectRatio="none" fill="currentColor">
+          <path d="M0 70 C 200 30, 400 110, 600 70 S 1000 30, 1200 70 C 1400 30, 1600 110, 1800 70 S 2200 30, 2400 70 V120 H0 Z"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ============ 3. BENEFICIOS (grid de 3 columnas) ============ -->
+    <section id="beneficios" class="border-t border-slate-800 bg-slate-900/60">
+      <div class="mx-auto max-w-6xl px-5 py-20 sm:py-24">
+        <h2 class="max-w-xl text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+          Una web que trabaja tanto como tú.
+        </h2>
+
+        <!-- Una columna en móvil, tres en pantallas medianas en adelante -->
+        <div class="mt-14 grid gap-12 md:grid-cols-3 md:gap-0 md:divide-x md:divide-slate-800">
+
+          <!-- Rápidas: ícono de rayo -->
+          <article class="md:pr-10">
+            <svg class="h-10 w-10 text-cyan-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/>
+            </svg>
+            <h3 class="mt-5 text-xl font-bold text-white">Rápidas</h3>
+            <p class="mt-3 leading-relaxed">Páginas estáticas que cargan al instante. No hagas esperar a tus clientes.</p>
+          </article>
+
+          <!-- Seguras: ícono de servidor seguro (servidor + candado) -->
+          <article class="md:px-10">
+            <svg class="h-10 w-10 text-cyan-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="6" rx="1.5"/>
+              <path d="M3 13.5V12a1.5 1.5 0 0 1 1.5-1.5H8"/>
+              <path d="M6.5 6h.01"/>
+              <rect x="12" y="14" width="9" height="7" rx="1.5"/>
+              <path d="M14 14v-1.5a2.5 2.5 0 0 1 5 0V14"/>
+              <path d="M3 13.5v3A1.5 1.5 0 0 0 4.5 18H9"/>
+            </svg>
+            <h3 class="mt-5 text-xl font-bold text-white">Seguras</h3>
+            <p class="mt-3 leading-relaxed">Arquitectura moderna sin bases de datos, 100% inmune a hackeos o caídas.</p>
+          </article>
+
+          <!-- Hechas para tu negocio: ícono de tienda/local -->
+          <article class="md:pl-10">
+            <svg class="h-10 w-10 text-cyan-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M3 9.5 4.5 4h15L21 9.5"/>
+              <path d="M3 9.5a3 3 0 0 0 6 0 3 3 0 0 0 6 0 3 3 0 0 0 6 0"/>
+              <path d="M5 12.5V20h14v-7.5"/>
+              <path d="M10 20v-4.5h4V20"/>
+            </svg>
+            <h3 class="mt-5 text-xl font-bold text-white">Hechas para tu negocio</h3>
+            <p class="mt-3 leading-relaxed">Diseños adaptados a celulares y listos para vender.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 4. LLAMADO A LA ACCIÓN FINAL ============ -->
+    <section id="contacto" class="border-t border-slate-800">
+      <div class="mx-auto max-w-3xl px-5 py-20 text-center sm:py-28">
+        <h2 class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+          Da el salto digital hoy mismo.
+        </h2>
+        <p class="mx-auto mt-5 max-w-xl text-lg leading-relaxed">
+          Cuéntanos de tu negocio y te enviamos una cotización para tu página web.
+        </p>
+        <!-- Cambia el número por el tuyo (formato: 52 + 10 dígitos, sin signos) -->
+        <a href="https://wa.me/5210000000000?text=Hola%2C%20quiero%20cotizar%20mi%20p%C3%A1gina%20web"
+           target="_blank" rel="noopener noreferrer"
+           class="mt-10 inline-block rounded-xl bg-cyan-500 px-8 py-4 text-base font-bold text-slate-900 shadow-lg shadow-cyan-500/30 transition hover:bg-cyan-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-white">
+          Cotiza tu página web
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="border-t border-slate-800 py-8">
+    <p class="px-5 text-center text-sm text-gray-400">© 2026 PuertoWeb</p>
+  </footer>
+
+  <!-- ============ 5. BOTÓN FLOTANTE DE WHATSAPP ============ -->
+  <a href="https://wa.me/5210000000000" target="_blank" rel="noopener noreferrer"
+     aria-label="Escríbenos por WhatsApp"
+     class="fixed bottom-5 right-5 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg shadow-black/40 transition hover:scale-105 focus:outline-none focus-visible:ring-2 focus-visible:ring-white">
+    <svg class="h-8 w-8" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+      <path d="M16.003 3C8.83 3 3 8.83 3 16c0 2.29.6 4.52 1.74 6.48L3 29l6.7-1.7A12.94 12.94 0 0 0 16 29c7.17 0 13-5.83 13-13S23.17 3 16.003 3Zm0 23.7c-1.95 0-3.86-.53-5.53-1.52l-.4-.24-3.98 1.01 1.06-3.88-.26-.4A10.66 10.66 0 0 1 5.3 16c0-5.9 4.8-10.7 10.7-10.7S26.7 10.1 26.7 16s-4.8 10.7-10.7 10.7Zm5.87-8.0c-.32-.16-1.9-.94-2.2-1.04-.3-.11-.51-.16-.73.16-.21.32-.83 1.04-1.02 1.26-.19.21-.37.24-.7.08-.32-.16-1.36-.5-2.59-1.6-.96-.85-1.6-1.9-1.79-2.22-.19-.32-.02-.5.14-.66.14-.14.32-.37.48-.56.16-.19.21-.32.32-.54.11-.21.05-.4-.03-.56-.08-.16-.73-1.76-1-2.4-.26-.63-.53-.54-.73-.55h-.62c-.21 0-.56.08-.85.4-.29.32-1.12 1.09-1.12 2.66s1.15 3.09 1.31 3.3c.16.21 2.26 3.45 5.47 4.84.76.33 1.36.53 1.82.68.77.24 1.46.21 2.01.13.61-.09 1.9-.78 2.17-1.53.27-.75.27-1.4.19-1.53-.08-.13-.29-.21-.61-.37Z"/>
+    </svg>
+  </a>
+
+</body>
+</html>
